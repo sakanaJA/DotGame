@@ -1,6 +1,19 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
+const MAX_WIDTH = 1200; // 最大幅
+const MAX_HEIGHT = 800; // 最大高さ
 
+function optimizeCanvasSize() {
+    // ウィンドウのサイズと最大サイズを比較して、小さい方を採用
+    canvas.width = Math.min(window.innerWidth, MAX_WIDTH);
+    canvas.height = Math.min(window.innerHeight, MAX_HEIGHT);
+}
+
+// 初期ロード時にcanvasのサイズを調整
+optimizeCanvasSize();
+
+// ウィンドウのサイズが変わったときにcanvasのサイズを再調整
+window.addEventListener('resize', optimizeCanvasSize);
 
 const MAX_DOTS = 9; // 一つのステージの最大ドット数
 
