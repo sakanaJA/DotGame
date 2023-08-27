@@ -1,38 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>Puzzle Slide</title>
-  <style>
-    #puzzle-container {
-      width: 80%;
-      height: 80vh;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 5px;
-      margin: 0 auto;
-    }
-
-    .puzzle-block {
-      background: #66cdaa;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2em;
-    }
-
-    #timer {
-      font-size: 1.5em;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ドット結びパズル</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-  <h1>たのしいよね？</h1>
-  <p id="timer">Time: 0 seconds</p>
-  <div id="puzzle-container"></div>
-
-  <script src="app.js"></script>
-  
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <script src="script.js"></script>
 </body>
 </html>
